@@ -62,9 +62,54 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
+# 3-Tier Rule Engine Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Overview
 
-### `npm run build` fails to minify
+This repository contains a 3-tier rule engine application designed to manage and apply business rules to data. The application is structured into three layers:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Presentation Layer**: Handles user interactions and displays results.
+2. **Application Layer**: Manages business logic and rule processing.
+3. **Data Layer**: Handles data storage and retrieval.
+
+## Architecture
+
+### 1. Presentation Layer
+
+- **Frontend**: Built using React.js for a responsive and interactive user interface.
+- **Endpoints**: Exposes RESTful APIs for communication with the Application Layer.
+
+### 2. Application Layer
+
+- **Business Logic**: Implements the core rule engine logic.
+- **Rule Management**: Allows dynamic addition, modification, and deletion of rules.
+- **API Endpoints**: Provides RESTful APIs for the Presentation Layer and interacts with the Data Layer.
+
+### 3. Data Layer
+
+- **Database**: Uses PostgreSQL for robust and scalable data storage.
+- **ORM**: Implements an Object-Relational Mapping (ORM) layer for efficient data manipulation.
+
+## Technologies Used
+
+- **Frontend**: React.js, Axios, Redux (for state management)
+- **Backend**: Node.js, Express.js
+- **Database**: PostgreSQL
+- **ORM**: Sequelize
+- **Deployment**: Docker, Kubernetes
+
+## Setup and Installation
+
+### Prerequisites
+
+- Node.js (v14.x or later)
+- PostgreSQL (v12.x or later)
+- Docker (optional, for containerization)
+
+### Steps
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/yourusername/rule-engine-app.git
+   cd rule-engine-app
